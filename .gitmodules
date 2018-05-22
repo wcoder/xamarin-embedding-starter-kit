@@ -1,0 +1,3 @@
+[submodule "e4k"]
+	path = e4k
+	url = https://github.com/mono/Embeddinator-4000.git
