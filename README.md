@@ -1,5 +1,5 @@
-# dotnet-embedding-starter-kit
-.NET Embedding starter kit for mobile development.
+# WIP: .NET Embedding Starter Kit
+[.NET Embedding](https://docs.microsoft.com/en-us/xamarin/tools/dotnet-embedding/) starter kit for mobile development.
 
 
 ## Build E4K from sources
