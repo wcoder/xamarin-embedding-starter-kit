@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DotNet.IosLibrary/DotNet.IosLibrary.h"
 
 @interface ViewController ()
 
@@ -16,14 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    DotNet_IosLibrary_Bridge *bridgeObj = [[DotNet_IosLibrary_Bridge alloc] init];
+    
+    bridgeObj.testStr = @"Test String Value 123";
+    
+    NSLog(bridgeObj.testStr);
+    
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end
