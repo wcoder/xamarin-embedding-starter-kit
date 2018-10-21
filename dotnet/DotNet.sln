@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet.AndroidLibrary", "Do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet.IosLibrary", "DotNet.IosLibrary\DotNet.IosLibrary.csproj", "{8E3EFBC3-838C-4511-969F-6FE341C9962C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet.SharedLibrary", "DotNet.SharedLibrary\DotNet.SharedLibrary.csproj", "{2643D228-A930-4D4D-9628-9352D4368A6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet.SharedLibraryTests", "DotNet.SharedLibraryTests\DotNet.SharedLibraryTests.csproj", "{57AB071E-936F-4F5F-AB1D-0524927340F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +23,13 @@ Global
 		{8E3EFBC3-838C-4511-969F-6FE341C9962C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E3EFBC3-838C-4511-969F-6FE341C9962C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E3EFBC3-838C-4511-969F-6FE341C9962C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2643D228-A930-4D4D-9628-9352D4368A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2643D228-A930-4D4D-9628-9352D4368A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2643D228-A930-4D4D-9628-9352D4368A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2643D228-A930-4D4D-9628-9352D4368A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57AB071E-936F-4F5F-AB1D-0524927340F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57AB071E-936F-4F5F-AB1D-0524927340F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57AB071E-936F-4F5F-AB1D-0524927340F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57AB071E-936F-4F5F-AB1D-0524927340F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
