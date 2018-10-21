@@ -54,5 +54,11 @@
     <Compile Include="Bridge.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DotNet.SharedLibrary\DotNet.SharedLibrary.csproj">
+      <Project>{2643D228-A930-4D4D-9628-9352D4368A6D}</Project>
+      <Name>DotNet.SharedLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
