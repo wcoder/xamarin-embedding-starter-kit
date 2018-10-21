@@ -26,5 +26,9 @@ public class MainActivity extends AppCompatActivity {
         String str = bridge.getTestStr();
 
         tv.setText(str);
+
+        // 5 - more samples
+        String v = bridge.getVersion();
+        String fibRes = Integer.toString(bridge.fib(15));
     }
 }

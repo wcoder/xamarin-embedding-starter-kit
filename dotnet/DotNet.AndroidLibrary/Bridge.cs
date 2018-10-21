@@ -6,6 +6,10 @@ using DotNet.SharedLibrary;
 
 namespace DotNet.AndroidLibrary
 {
+    /// <summary>
+    /// Documentation:
+    /// https://docs.microsoft.com/en-us/xamarin/tools/dotnet-embedding/get-started/java/android#current-limitations-on-android
+    /// </summary>
     public class Bridge
     {
         public string Version => "1.0";
