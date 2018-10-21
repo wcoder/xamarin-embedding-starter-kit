@@ -1,7 +1,7 @@
 
 # E4K
 ios/DotNet.IosLibrary.framework
-
+android/DotNet.AndroidLibrary/*.aar
 
 # User-specific files
 *.suo
