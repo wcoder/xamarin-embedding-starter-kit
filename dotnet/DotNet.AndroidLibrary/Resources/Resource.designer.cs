@@ -43,6 +43,9 @@ namespace DotNet.AndroidLibrary
 			// aapt resource value: 0x7f040000
 			public static int btn_clickMe = 2130968576;
 			
+			// aapt resource value: 0x7f040001
+			public static int btn_returnResult = 2130968577;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -77,6 +80,9 @@ namespace DotNet.AndroidLibrary
 			
 			// aapt resource value: 0x7f030000
 			public static int library_name = 2130903040;
+			
+			// aapt resource value: 0x7f030003
+			public static int return_result = 2130903043;
 			
 			// aapt resource value: 0x7f030001
 			public static int x_hello = 2130903041;

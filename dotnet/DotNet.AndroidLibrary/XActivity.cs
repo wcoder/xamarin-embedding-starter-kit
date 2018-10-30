@@ -8,6 +8,7 @@
 //
 
 using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Widget;
@@ -29,6 +30,15 @@ namespace DotNet.AndroidLibrary
             clickMeButton.Click += (sender, e) =>
             {
                 clickMeButton.Text = "Clicked!";
+            };
+
+            var returnResultButton = FindViewById<Button>(Resource.Id.btn_returnResult);
+            returnResultButton.Click += (sender, e) =>
+            {
+                var intent = new Intent();
+                intent.PutExtra("payload", clickMeButton.Text);
+                SetResult(Result.Ok, intent);
+                Finish();
             };
         }
     }
