@@ -1,4 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="library_name">DotNet.AndroidLibrary</string>
+    <string name="x_hello">Hello from Xamarin.Android library</string>
+    <string name="click_me">Click Me!</string>
 </resources>

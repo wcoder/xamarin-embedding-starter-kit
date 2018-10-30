@@ -37,11 +37,49 @@ namespace DotNet.AndroidLibrary
 			}
 		}
 		
-		public partial class String
+		public partial class Id
+		{
+			
+			// aapt resource value: 0x7f040000
+			public static int btn_clickMe = 2130968576;
+			
+			static Id()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Id()
+			{
+			}
+		}
+		
+		public partial class Layout
 		{
 			
 			// aapt resource value: 0x7f020000
-			public static int library_name = 2130837504;
+			public static int activity_x = 2130837504;
+			
+			static Layout()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Layout()
+			{
+			}
+		}
+		
+		public partial class String
+		{
+			
+			// aapt resource value: 0x7f030002
+			public static int click_me = 2130903042;
+			
+			// aapt resource value: 0x7f030000
+			public static int library_name = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public static int x_hello = 2130903041;
 			
 			static String()
 			{

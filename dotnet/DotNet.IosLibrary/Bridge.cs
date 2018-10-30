@@ -1,5 +1,5 @@
 ﻿//
-// MyClass.cs
+// Bridge.cs
 // Copyright (c) 2018 Yauheni Pakala
 //
 using DotNet.SharedLibrary;

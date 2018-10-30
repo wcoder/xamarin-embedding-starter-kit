@@ -47,18 +47,23 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Bridge.cs" />
+    <Compile Include="XActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\layout\activity_x.axml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DotNet.SharedLibrary\DotNet.SharedLibrary.csproj">
       <Project>{2643D228-A930-4D4D-9628-9352D4368A6D}</Project>
       <Name>DotNet.SharedLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\layout\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
