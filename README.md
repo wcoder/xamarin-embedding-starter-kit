@@ -14,6 +14,12 @@
 
 > Android NDK v15 ([Embeddinator-4000/issues#574](https://github.com/mono/Embeddinator-4000/issues/574))
 
+## Features
+
+- Shared code
+- Navigation between Xamarin and Native (Android, iOS: WIP)
+- Tests
+
 ## Structure
 
 Main folders of starter kit:
