@@ -16,8 +16,8 @@
 
 ## Features
 
-- Shared code
-- Navigation between Xamarin and Native (Android, iOS: WIP)
+- Shared code;
+- Navigation between Xamarin and Native;
 - Tests
 
 ## Structure
