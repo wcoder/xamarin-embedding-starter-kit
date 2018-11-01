@@ -36,6 +36,17 @@
     int fibRes = [bridgeObj fibN:(15)];
     
     NSLog(@"%@", [[NSString alloc] initWithFormat:@"%d", fibRes]);
+    
+    [_NavToXBtn addTarget:self action:@selector(navBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)navBtnClicked:(UIButton*)sender
+{
+    //UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"DotNet.IosLibrary.XStoryboard" bundle:[NSBundle bundleForClass:XViewController.self]];
+    //XViewController *navVC = (XViewController *)[storyBoard instantiateViewControllerWithIdentifier:@"XViewController"];
+    
+    // 6 - navigate to XViewController
+    [self.navigationController pushViewController:[XViewController alloc] animated:YES];
 }
 
 @end
