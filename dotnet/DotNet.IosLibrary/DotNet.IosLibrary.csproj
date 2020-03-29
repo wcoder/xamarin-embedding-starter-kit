@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Net.Http">
+      <HintPath>..\..\..\..\..\..\Library\Frameworks\Mono.framework\External\xbuild-frameworks\MonoAndroid\v1.0\System.Net.Http.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />

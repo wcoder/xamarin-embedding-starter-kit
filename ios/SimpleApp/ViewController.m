@@ -17,11 +17,13 @@
 
 @implementation ViewController
 
+DotNet_IosLibrary_Bridge *bridgeObj;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     // 2 - create instance of .NET class
-    DotNet_IosLibrary_Bridge *bridgeObj = [[DotNet_IosLibrary_Bridge alloc] init];
+    bridgeObj = [[DotNet_IosLibrary_Bridge alloc] init];
     
     // 3 - set value
     bridgeObj.testStr = @"Test String Value 123";
@@ -38,6 +40,8 @@
     NSLog(@"%@", [[NSString alloc] initWithFormat:@"%d", fibRes]);
     
     [_NavToXBtn addTarget:self action:@selector(navBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [_LoadDataNBtn addTarget:self action:@selector(loadDataNBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 -(void)navBtnClicked:(UIButton*)sender
@@ -48,5 +52,17 @@
     // 6 - navigate to XViewController
     [self.navigationController pushViewController:[XViewController alloc] animated:YES];
 }
+
+-(void)loadDataNBtnClicked:(UIButton*)sender
+{
+    // 7 - load data from network
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+        NSString *data = [bridgeObj loadDataUrl:@"https://google.com"];
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            self->_LogView.text = data;
+        });
+    });
+}
+
 
 @end

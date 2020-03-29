@@ -2,6 +2,9 @@ package name.pakalo.evgeniy.simpleapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +20,7 @@ import dotnet.androidlibrary.XActivity;
 public class MainActivity extends AppCompatActivity {
 
     private TextView _tv;
+    private Bridge _bridge;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,19 +30,19 @@ public class MainActivity extends AppCompatActivity {
         _tv = findViewById(R.id.tv_hello);
 
         // 2 - create instance of .NET class
-        Bridge bridge = new Bridge();
+        _bridge = new Bridge();
 
         // 3 - call method with parameter
-        bridge.setTestStr("Test str from .NET");
+        _bridge.setTestStr("Test str from .NET");
 
         // 4 - get result
-        String str = bridge.getTestStr();
+        String str = _bridge.getTestStr();
 
         _tv.setText(str);
 
         // 5 - more samples
-        String v = bridge.getVersion();
-        String fibRes = Integer.toString(bridge.fib(15));
+        String v = _bridge.getVersion();
+        String fibRes = Integer.toString(_bridge.fib(15));
 
         /////////////////////////////////////////////////////
 
@@ -60,6 +64,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button btnLoadData = findViewById(R.id.btn_loadDataFromNetwork);
+        btnLoadData.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final String[] data = {""};
+                Handler handler = new Handler() {
+                    @Override
+                    public void handleMessage(Message msg) {
+                        _tv.setText(data[0]);
+                    }
+                };
+
+                Runnable runnable = new Runnable() {
+                    public void run() {
+                        data[0] = _bridge.loadData("https://google.com");
+                    }
+                };
+                Thread mythread = new Thread(runnable);
+                mythread.start();
+                //new LoadDataAsyncTask().execute();
+            }
+        });
     }
 
     @Override
@@ -70,5 +96,17 @@ public class MainActivity extends AppCompatActivity {
         // 8 - get result from XActivity
         String payload = data.getStringExtra("payload");
         _tv.setText("Result: " + payload);
+    }
+
+    class LoadDataAsyncTask extends AsyncTask<String, Process, String> {
+        @Override
+        protected String doInBackground(String... strings) {
+            return _bridge.loadData(strings[0]);
+        }
+
+        @Override
+        protected void onPostExecute(String data) {
+            _tv.setText(data);
+        }
     }
 }

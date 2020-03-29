@@ -15,7 +15,7 @@ namespace DotNet.AndroidLibrary
 {
 	
 	
-	[System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
 	public partial class Resource
 	{
 		
@@ -40,11 +40,11 @@ namespace DotNet.AndroidLibrary
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040000
-			public static int btn_clickMe = 2130968576;
+			// aapt resource value: 0x7F010000
+			public static int btn_clickMe = 2130771968;
 			
-			// aapt resource value: 0x7f040001
-			public static int btn_returnResult = 2130968577;
+			// aapt resource value: 0x7F010001
+			public static int btn_returnResult = 2130771969;
 			
 			static Id()
 			{
@@ -59,7 +59,7 @@ namespace DotNet.AndroidLibrary
 		public partial class Layout
 		{
 			
-			// aapt resource value: 0x7f020000
+			// aapt resource value: 0x7F020000
 			public static int activity_x = 2130837504;
 			
 			static Layout()
@@ -75,17 +75,17 @@ namespace DotNet.AndroidLibrary
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f030002
-			public static int click_me = 2130903042;
+			// aapt resource value: 0x7F030000
+			public static int click_me = 2130903040;
 			
-			// aapt resource value: 0x7f030000
-			public static int library_name = 2130903040;
+			// aapt resource value: 0x7F030001
+			public static int library_name = 2130903041;
 			
-			// aapt resource value: 0x7f030003
-			public static int return_result = 2130903043;
+			// aapt resource value: 0x7F030002
+			public static int return_result = 2130903042;
 			
-			// aapt resource value: 0x7f030001
-			public static int x_hello = 2130903041;
+			// aapt resource value: 0x7F030003
+			public static int x_hello = 2130903043;
 			
 			static String()
 			{

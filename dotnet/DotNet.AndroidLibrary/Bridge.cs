@@ -2,7 +2,10 @@
 // Bridge.cs
 // Copyright (c) 2018 Yauheni Pakala
 //
+using System;
 using DotNet.SharedLibrary;
+using Xamarin.Android.Net;
+using Android.Util;
 
 namespace DotNet.AndroidLibrary
 {
@@ -21,5 +24,18 @@ namespace DotNet.AndroidLibrary
         }
 
         public int Fib(int n) => Utils.Fib(n);
+
+        public string LoadData(string url)
+        {
+            try
+            {
+                return Utils.LoadData(url, new AndroidClientHandler());
+            }
+            catch (Exception e)
+            {
+                Log.Error(nameof(Bridge), e.ToString());
+            }
+            return string.Empty;
+        }
     }
 }

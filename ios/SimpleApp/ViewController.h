@@ -10,7 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *LogView;
 @property (weak, nonatomic) IBOutlet UIButton *NavToXBtn;
+@property (weak, nonatomic) IBOutlet UIButton *LoadDataNBtn;
 
 @end
 

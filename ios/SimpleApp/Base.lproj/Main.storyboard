@@ -38,22 +38,45 @@
                                 <rect key="frame" x="91" y="105" width="193" height="30"/>
                                 <state key="normal" title="Navigate to XViewController"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbs-UF-AmL">
+                                <rect key="frame" x="116" y="143" width="143" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Gaz-3i-aSl"/>
+                                </constraints>
+                                <state key="normal" title="Load Data (Network)"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ay-Xm-AW8">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="vxf-07-9E3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="21l-Nn-5oX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3ab-VF-pkG"/>
                             <constraint firstItem="21l-Nn-5oX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="7MI-eq-3SP"/>
+                            <constraint firstItem="Mbs-UF-AmL" firstAttribute="top" secondItem="21l-Nn-5oX" secondAttribute="bottom" constant="8" id="SUb-uY-uqY"/>
+                            <constraint firstItem="Mbs-UF-AmL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZKE-F0-avS"/>
+                            <constraint firstItem="7ay-Xm-AW8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gX2-ax-xw0"/>
+                            <constraint firstItem="7ay-Xm-AW8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hef-hR-h92"/>
+                            <constraint firstItem="7ay-Xm-AW8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uaS-Uc-5iq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="zTr-0r-uGL"/>
                     <connections>
+                        <outlet property="LoadDataNBtn" destination="Mbs-UF-AmL" id="8ME-F3-qdf"/>
+                        <outlet property="LogView" destination="7ay-Xm-AW8" id="qJt-La-jOP"/>
                         <outlet property="NavToXBtn" destination="21l-Nn-5oX" id="T9y-n6-0Bs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-428" y="53"/>
+            <point key="canvasLocation" x="-428" y="52.623688155922046"/>
         </scene>
     </scenes>
 </document>

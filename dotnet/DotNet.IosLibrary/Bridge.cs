@@ -2,6 +2,7 @@
 // Bridge.cs
 // Copyright (c) 2018 Yauheni Pakala
 //
+using System.Net.Http;
 using DotNet.SharedLibrary;
 
 namespace DotNet.IosLibrary
@@ -21,5 +22,8 @@ namespace DotNet.IosLibrary
         }
 
         public int Fib(int n) => Utils.Fib(n);
+
+        public string LoadData(string url)
+            => Utils.LoadData(url, new HttpClientHandler());
     }
 }
